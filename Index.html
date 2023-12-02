@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<title>project FINAL</title>
+	<style>
+		a{
+			color: black;
+			text-decoration: none;
+		}
+		a:hover{
+			color: rgb(5 158 119);
+		}
+		div {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			position: relative;
+			display: block;
+		}
+		div img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		* {box-sizing: border-box}
+		body {font-family: Verdana, sans-serif; margin:0}
+		.mySlides {display: none}
+		img {vertical-align: middle;}
+
+		.slideshow-container {
+		max-width: 100%;
+		position: relative;
+		margin: auto;
+
+		}
+
+		.prev, .next {
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		padding: 16px;
+		margin-top: -22px;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		transition: 0.6s ease;
+		border-radius: 0 3px 3px 0;
+		}
+
+		.next {
+		right: 0;
+		border-radius: 3px 0 0 3px;
+		}
+
+		.prev:hover, .next:hover {
+		background-color: rgba(0,0,0,0.8);
+		}
+		.numbertext {
+		color: #f2f2f2;
+		font-size: 12px;
+		padding: 8px 12px;
+		position: absolute;
+		top: 0;
+		}
+		.dot {
+		cursor: pointer;
+		height: 15px;
+		width: 15px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+		}
+		.active, .dot:hover {
+		background-color:rgba(10, 119, 88, 0.267);
+		}
+		img {
+			border-radius: 5px 5px 0 0;
+		}
+		
+		@media only screen and (max-width: 300px) {
+		.prev, .next,.text {font-size: 11px}
+		}
+		.page {
+			margin: 0 auto;
+			width: 100%;
+			max-width: 1300px;
+			padding: 0 15px;
+			display: flex;
+			align-content: flex-start;
+			flex-wrap: wrap;
+  			justify-content: center;
+		}
+		.header-logo{
+			max-width: 15%;
+			margin-top: 1%;
+		}
+		.header-text-one{
+			display: flex;
+		}
+		.ttt{
+			display: flex; margin-top: 1%; margin-left: 1%;
+		}
+		.nav{
+			margin-top: 1%;
+			margin-left: 1%;
+			font-size: 12pt;
+			overflow: auto;
+			
+		}
+	
+		.nav_text{
+			color: gray;
+			font-size: 10pt;
+			text-decoration: none;
+		}
+		.nav_text:hover{
+			color: rgb(5 158 119);
+		}
+		.nav_text2{
+			color:#fff200cd;
+			text-decoration: none;
+		}
+		.nav_text2:hover{
+			color: rgb(5 158 119);
+		}
+		.nav:hover{
+			color:rgb(0, 0, 0);
+		}
+		.card-container{
+			display: flex;
+		}
+		.card-inner{
+			margin: 5%;
+			max-width: 70%;
+			font-size: 10pt;
+			font-family: Inter,Helvetica Neue,Helvetica,Arial,sans-serif;
+			color: #a8a8a8;
+		}
+		.card {
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+			transition: 0.3s;
+			border-radius: 5px;
+			width: 23%;
+			height: 25rem;
+			margin: 2%;
+			
+		}
+		.cardM {
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+			transition: 0.3s;
+			border-radius: 5px;
+			width: 23%;
+			height: 300px;
+			margin: 2%;
+			
+		}
+		a.button {
+			display: inline-block;
+			background: rgb(231 248 243);
+			padding: 11px;
+			border-radius: 3px;
+			text-decoration: none;
+			font-family: Tahoma;
+			font-size: 14px;
+			line-height: 1;
+			font-weight: 100;
+			color: rgb(5 158 119);
+			position: absolute; 
+			bottom: 0;
+			margin: 5%;
+			
+		}
+		.kurs{
+			display: flex;
+			width: 100%;
+			height: 5%;
+		}
+		.end{
+			display: flex;
+			background-color: rgb(249, 248, 248);
+			font-size: 10pt;
+			padding: 2%;
+		}
+		
+		@media screen and (max-width: 770px) {
+            .toggle-btn {
+                cursor: pointer;
+                padding: 10px;
+                background-color: #3498db;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+            }
+            .icon-container {
+                cursor: pointer;
+                position: fixed;
+                top: 10px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                display: flex;
+            }
+            .kot {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 4px;
+                padding-bottom: 100%;
+                padding-left: 20%;
+                background-color: rgb(10, 119, 89);
+            }
+
+            .kot a {
+                display: block;
+                padding-left: 100px;
+                color: #333;
+                text-decoration:solid;
+                transition: background-color 0.3s;
+            }
+            .kot a:hover {
+                background-color:#d3d00cee;
+            }
+			.kurs{
+				height: 7%;
+				font-size: 9pt;
+			}
+			
+
+			#eur{
+				display: none;
+			}
+			#tenge{
+				display: none;
+			}
+			#newyear{
+				display: none;
+			}
+			#helper{
+				display: none;
+			}
+			#sport{
+				width: 50%;
+				font-size: 9pt;
+			}
+			#iphone{
+				width: 50%;
+				font-size: 9pt;
+			}
+			#ureg{
+				display: none;
+			}
+			#moch{
+				width: 50%;
+				font-size: 9pt;
+			}
+			#halyk_market{
+				display: none;
+			}
+			#online_credit{
+				width: 50%;
+				font-size: 9pt;
+			}
+			.nav{
+				display: none;
+			}
+			.headers-logo{
+				width: 110px;
+			}
+			.menu-btn span{
+				background-color: rgba(10, 119, 88, 0);
+				color: #fafafa;
+			}
+			#endimg{
+                width: 100%;
+            }
+
+  		}	
+          .menu-btn span{
+				background-color: rgb(10, 119, 88);
+				color: #fafafa;
+			}	
+
+		header {
+			display: flex;
+			justify-content: flex-end;
+			
+		}
+		.menu-btn {
+			width: 30px;
+			height: 30px;
+			position: relative;
+			z-index:5;
+			overflow: hidden;
+		}
+
+		.menu-btn span {
+			width: 30px;
+			height: 2px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: black;
+			transition: all .0s;
+		}
+
+		.menu-btn span:nth-of-type(2) {
+			top: calc(50% - 5px);
+		}
+		.menu-btn span:nth-of-type(3) {
+			top: calc(50% + 5px);
+		}
+		.menu-btn.active span:nth-of-type(1) {
+		display: none;
+		}
+		.menu-btn.active span:nth-of-type(2) {
+		top: 50%;
+		transform: translate(-50%, 0%) rotate(45deg);  
+		}
+		.menu-btn.active span:nth-of-type(3) {
+		top: 50%;
+		transform: translate(-50%, 0%) rotate(-45deg); 
+		}
+		.menu {
+			position: fixed;
+			z-index: 3;
+			top: 0;
+			left: 80%;
+			width: 30%;
+			height: 100%;
+			padding: 15px;
+		    background: rgb(10, 119, 88);
+			transform: translateX(80%);
+			transition: transform 0.7s; 
+		}
+
+		.menu.active {
+			transform: translateX(0);
+		}
+
+		.menu li {
+			list-style-type: none;
+			margin-top: 5px;
+		}
+		@-webkit-keyframes fade {
+		from {opacity: .4}
+		to {opacity: 1}
+		}
+
+		@keyframes fade {
+		from {opacity: .4}
+		to {opacity: 1}
+		}
+		.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s;
+		}
+
+				
+		
+	</style>
+</head>
+<body>
+	<div class="page">
+			<div class="header">
+				<div class="header-text-one">
+					<div class="header-logo">
+						<a href="Main_page.html">
+						<img src="https://halykbank.kz/themes/halyk/assets/images/logo.svg" alt="halykbank.kz" class="headers-logo">
+						</a>
+					</div>
+					<div>
+						<div class="ttt">
+							<div>
+									<nav class="nav">
+										<a class="nav_text" href="Main_page.html">Мои Данные</a>
+										<a class="nav_text" href="halyk_bussness.html">Бизнесу</a>
+										<a class="nav_text" href="halyk_club.html">Halyk Club</a>
+										<a class="nav_text" href="https://halykbank.kz/knowledge_base">Halyk Info</a>
+										<a class="nav_text" href="o_banke.html">О банке</a>
+									</nav>
+									
+							</div>	
+							
+							<div>
+								<nav class="nav" style="text-align: right;">
+									<a class="nav_text"  href="https://halykbank.kz/map/atm">Банк на карте</a>
+								</nav>
+								
+							
+							</div>
+						</div>
+						
+						<div>
+							<nav class="nav">
+								<a class="nav_text2" href="https://halykbank.kz/homebank">Home bank</a>
+								<a class="nav_text2" href="https://halykbank.kz/promo">Акций</a>
+								<a class="nav_text2" href="https://halykbank.kz/credits">
+									<span id="credits">
+										Кредиты
+									</span>
+									</a>
+								<a class="nav_text2" href="https://halykbank.kz/market">
+									Маркет
+								</a>
+								<a class="nav_text2" href="https://halykbank.kz/instalments">
+									<span id="instalments">
+										Рассрочка
+									</span>
+								</a>
+								<a class="nav_text2" href="https://halykbank.kz/cards">
+									<span id="cards">
+										Карта
+									</span>
+								</a>
+								<a class="nav_text2" href="https://halykbank.kz/deposits">
+									<span id="deposite">
+										Депозиты
+									</span>
+								</a>
+								<a class="nav_text2" href="https://halykbank.kz/transfers">
+									<span id="transfers">
+										Переводы
+									</span>
+								</a>
+								<a class="nav_text2" href="https://halykbank.kz/others">
+									<span id="others">
+										Другое
+									</span>
+								</a>
+							</nav>
+							<header>
+								<div class="menu-btn">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</header>
+							
+							<div class="menu">
+								<nav>
+								<ul>
+								  <li><a class="nav_text2" href="#">Мои данные</a></li>
+								  <li><a class="nav_text2" href="#">Бизнесу</a></li>
+								  <li><a class="nav_text2" href="#">Мои товары</a></li>
+								  <li><a class="nav_text2" href="page2.html">Аналитика</a></li>
+								</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+			<div class="main">
+				
+				<div id="slide" class="slideshow-container">
+
+					<div class="mySlides fade">
+					  <div class="numbertext">1 / 3</div>
+					  <a href="https://halykbank.kz/5-bonus">
+					  <img src="https://sun9-east.userapi.com/sun9-19/s/v1/ig2/oZadGzfufopuCS7eGZJ5WQsDOMGk7g5Fzv0SdxPih70w6lPyAv_P2c3hB0Tpxnm0I75CwloPx3_TfTAMXt5qxgso.jpg?size=1667x470&quality=95&type=album" style="width:100%">
+					  </a>
+					</div>
+					
+					<div class="mySlides fade">
+					  <div class="numbertext">2 / 3</div>
+					  <a href="https://halykbank.kz/card/easy-digital">
+						<img src="https://sun9-west.userapi.com/sun9-71/s/v1/ig2/npr72HTVizEg5u4OVXeCiFlvndLK1VJN471Y9XI1_MUcoUyCWvnl52WJQR_XEfw2Dc6wyV4JMOhfvwcGzmjsmKYs.jpg?size=1664x476&quality=95&type=album" style="width:100%">
+					  </a>
+					  
+					</div>
+					
+					<div class="mySlides fade">
+					  <div class="numbertext">3 / 3</div>
+					  <a href="https://halykbank.kz/promo/165">
+						<img src="https://sun9-east.userapi.com/sun9-28/s/v1/ig2/vh0rjOuV0TVyT0HtT54i_ZDOPr_QQ-V4WM1xzldBLplHSdNbTyQJ2Z4cNEms61oUrYbp2w24dQt5YIAW0LDBaoOx.jpg?size=1659x473&quality=95&type=album" style="width:100%">
+					  </a>
+					  
+					</div>
+					
+					<a class="prev" onclick="plusSlides(-1)">❮</a>
+					<a class="next" onclick="plusSlides(1)">❯</a>
+					
+				</div>
+				<br>
+				<div id="scrollNumber" style="text-align:center">
+				  <span class="dot" onclick="currentSlide(1)"></span> 
+				  <span class="dot" onclick="currentSlide(2)"></span> 
+				  <span class="dot" onclick="currentSlide(3)"></span> 
+				</div>
+				
+
+				
+				<div id="creditsSlide" style="display: none; padding: 5px;">
+						<div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+							<div style="margin:1% ;">
+								<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+									<strong>Информация по кредитам для клиентов Сбербанк</strong> 
+								</div> 
+								<p>Информация по кредитам для клиентов Сбербанк</p>
+								<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+									<strong>Ипотека</strong> 
+								</div> 
+								<p>
+									Первичное жилье от BAZIS-A <br>
+									Первичное жилье от BI Group <br>
+									Ипотека <br>
+									«7-20-25» <br>
+									Halyk Sale <br>
+								</p>
+								<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+									<strong>Урегулирование проблемной задолженности</strong> 
+								</div> 
+								<p>
+									Урегулирование проблемной задолженности
+								</p>
+							</div>
+							<div style="margin:1% ;">
+								<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+									<strong>Онлайн кредит</strong> 
+								</div>
+								<p>
+									Онлайн-кредит в Halyk Homebank <br>
+									Онлайн-кредит в Air Astana <br>
+									Онлайн-кредит на авиабилеты FlyArystan <br>
+								</p>
+								<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+									<strong>Рассрочка на подведение газа</strong> 
+								</div>
+								<p>
+									Рассрочка на подведение газа Нур-Султан <br>
+									Рассрочка на подведение газа Алматы <br>
+								</p>
+								<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+									<strong>Победители розыгрыша квартир</strong> 
+								</div>
+								<p>
+									Победители розыгрыша квартир
+								</p>
+							</div>
+							<div style="margin:1% ;">
+								<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+									<strong>Кредиты наличными</strong> 
+								</div>
+								<p>
+									Рефинансирование<br>
+									До 7 000 000 ₸ кредит без залога <br>
+									Под залог депозита <br>
+									На неотложные нужды <br>
+								</p>
+								<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+									<strong>Автокредит</strong> 
+								</div>
+								<p>
+									Автокредит без залога <br>
+									Автокредит льготный (новая программа от ФРП) <br>
+									Автокредит в салонах-партнерах <br>
+									Автокредит стандартный <br>
+									Автокредит льготный (БРК) <br>
+								</p>
+							</div>
+						</div>
+				</div>
+				<div id="instalmentsSlide" style="display: none; padding: 5px;">
+					<div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+						<div style="margin:1% ;">
+							<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+								<strong>Карта рассрочки Halyk Light</strong> 
+							</div> 
+							<p>Карта рассрочки Halyk Light</p>
+							<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+								<strong>Рассрочка в магазинах</strong> 
+							</div> 
+							<p>
+								Онлайн-рассрочка в Chocomart <br>
+								Онлайн-рассрочка в магазинах Fora.kz <br>
+								Онлайн-рассрочка в торговом доме Кама-Казахстан <br>
+								Онлайн-рассрочка в Formula 7 <br>
+								Онлайн-рассрочка в Viled <br>
+							</p>
+						</div>
+						<div style="margin:1% ;">
+							<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+								<strong>Онлайн-рассрочка</strong> 
+							</div> 
+							<p>
+								Онлайн-рассрочка в Halyk Tour <br>
+								Онлайн-рассрочка в Halyk Travel <br>
+								Онлайн-рассрочка в Technodom <br>
+								Онлайн-рассрочка в Sulpak <br>
+								Онлайн-рассрочка в Mechta.kz <br>
+								Онлайн-рассрочка в Alser <br> 
+								Онлайн-рассрочка в Evrika<br>
+								Онлайн-рассрочка в магазинах iSpace <br>
+								Онлайн-рассрочка в MARWIN <br>
+								Онлайн-рассрочка в Vlife <br> <br>
+							</p>
+							<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+								<strong>Homebank Рассрочка</strong> 
+							</div> 
+							<p>
+								Homebank Рассрочка
+							</p>
+						</div>
+						<div style="margin:1% ;">
+							<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+								<strong>Homebank Рассрочка</strong> 
+							</div> 
+							<p>
+								Homebank Рассрочка
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				<div id="cardsSlide" style="display: none; padding: 5px;">
+					<div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+						<div style="margin:1% ;">
+							<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+								<strong>Дебетовые карты</strong> 
+							</div> 
+							<p>
+								Цифровая карта Halyk Bonus Digital <br>
+								Halyk Bonus <br>
+								Цифровая карта Sinooil Digital <br>
+								Black Card <br>
+								Diamond Card <br>
+								Специальная карта для пособий <br>
+								Карта для нерезидентов <br>
+								Карта Halyk Easy <br>
+							</p>
+							<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+								<strong>Бесплатная доставка</strong> 
+							</div> 
+							<p>
+								Бесплатная доставка
+							</p>
+						</div>
+						<div style="margin:1% ;">
+							<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+								<strong>Кредитные карты</strong> 
+							</div> 
+							<p>
+								My!Card  <br>
+								American Express White  <br>
+								American Express Blue  <br>
+								American Express Gold  <br>
+								American Express Platinum  <br>
+							</p>
+							<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+								<strong>Заявка по банкоматам и терминалам</strong> 
+							</div> 
+							<p>
+								Заявка по банкоматам и терминалам
+							</p>
+						</div>
+						<div style="margin:1% ;">
+							<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+								<strong>Оплата смартфоном</strong> 
+							</div> 
+							<p>
+								Google Pay  <br>
+								Apple Pay  <br>
+								Samsung Pay  <br>
+							</p>
+							<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+								<strong>Полезное о картах</strong> 
+							</div> 
+							<p>
+								3D Secure  <br>
+								Доверенный номер  <br>
+								Установка и смена PIN кода  <br>
+								Push-уведомления  <br>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="depositeSlide" style="display: none; padding: 5px;">
+					<div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+						<div style="margin:1% ;">
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>Депозиты онлайн</strong> 
+							</div> 
+							<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+								<strong>10% компенсация на депозиты в тенге</strong> 
+							</div> 
+						</div>
+						<div style="margin:1% ;">
+							<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+								<strong>Образовательный вклад AQYL</strong> 
+							</div>
+						</div>
+						<div style="margin:1% ;">
+							<div style="border-bottom: 3px solid rgb(221, 216, 216);">
+								<strong>Гарантирование депозитов</strong> 
+							</div> 
+						</div>
+					</div>
+				</div>
+				<div id="transfersSlide" style="display: none; padding: 5px;">
+					<div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+						<div style="margin:1% ;">
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>На номер телефона</strong> 
+							</div> 
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>Western Union Online</strong> 
+							</div> 
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>Переводы в Узбекистан</strong> 
+							</div> 
+						</div>
+						<div style="margin:1% ;">
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>На карты</strong> 
+							</div>
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>Золотая Корона</strong> 
+							</div>
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>Переводы по Face ID и Touch ID в Halyk Homebank</strong> 
+							</div>
+						</div>
+						<div style="margin:1% ;">
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>На счет</strong> 
+							</div>
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>MoneyGram</strong> 
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div id="othersSlide" style="display: none; padding: 5px;">
+					<div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+						<div style="margin:1% ;">
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>Halyk Private</strong> 
+							</div> 
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>Золото</strong> 
+							</div> 
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>Кассовые услуги</strong> 
+							</div> 
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>Halyk Invest</strong> 
+							</div> 
+						</div>
+						<div style="margin:1% ;">
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>Выплаты ЕПВ из ЕНПФ</strong> 
+							</div>
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>Металлические счета</strong> 
+							</div>
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>Голосовая биометрия</strong> 
+							</div>
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>Страховая компания «Халык»</strong> 
+							</div>
+						</div>
+						<div style="margin:1% ;">
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>Сейфовые ячейки</strong> 
+							</div>
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>Трансфер-агентские услуги</strong> 
+							</div>
+							<div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+								<strong>100% бонусов за коммунальные платежи</strong> 
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="kurs">
+					<div>
+						
+						<h5>
+							<img id="tenge" src="https://cdn-icons-png.flaticon.com/512/5714/5714731.png" alt="kusr_tenge" style="height: 20px; width: 28px; float: left; margin-right: 10px;">
+							USD: 476/488
+						</h5>
+					</div>
+					<div>
+						<h5>
+							RUB: 7/8
+						</h5>
+					</div>
+					<div id="eur">
+						<h5>
+							EUR: 492/499
+						</h5>
+					</div>
+					<div>
+						<h5>
+							<a class="button" href="https://halykbank.kz/exchange-rates">Все курсы валют ></a>
+
+						</h5>
+					</div>
+				</div>
+				<div class="card-container">
+					<div id="online_credit" class="card">
+						<img src="https://sun9-west.userapi.com/sun9-63/s/v1/ig2/S6XCw585jqklJgZs1GAaKiW9kE6senvMXGVEogGo2gMEfDWY02LquPQ0UBCX9WNFms-O-UL2ZkhIQESD76FpBbMQ.jpg?size=1150x697&quality=95&type=album" alt="market" style="width:100%">
+						<div class="card-inner">
+							<h4><b>Онлайн кредит до 7 миллионов</b></h4>
+							<ul>
+								<li>
+									Срок до 5 лет
+								</li>
+								<li>
+									Скидка 50%
+								</li>
+							</ul>
+						</div>
+						<a class="button" href="Credit.html">Оформить кредит</a>
+
+					</div>
+					<div id="halyk_market" class="card">
+						<img src="https://sun9-east.userapi.com/sun9-35/s/v1/ig2/6iarRC3AWBqKbyWKKSoF5ohSzSxt5aqcmlKnDKfAfTFW_tvTIDdvYV6zuDH1k7s-qX96ScvuG_WSpVbVBQxEsxss.jpg?size=633x377&quality=95&type=album" alt="market" style="width:100%">
+						<div class="card-inner">
+							<h4><b>Покупки в Халык Маркет</b></h4>
+							<ul style="max-width: 80%;">
+								<li>
+									Рассрочка на 24 месяцев
+								</li>
+								<li>
+									Сумма на 600 000 тг
+								</li>
+							</ul>
+							
+						</div>
+						<a class="button" href="Credit.html">Подробнее</a>
+
+					</div>
+					<div id="ureg" class="card">
+						<img src="https://sun9-north.userapi.com/sun9-77/s/v1/ig2/MMSd4g4Re69rxOxjaFxcl3ZwN5B_74495M0hjCy25-lPOHfHqZA43IBkHmk3pE_ASUUho-ZPGZjUmzhn47FChf69.jpg?size=629x378&quality=95&type=album" alt="market" style="width:100%">
+						<div class="card-inner">
+							<h4><b>Урегулирование задолженности</b></h4>
+							<ul>
+								<li>
+									Условия и порядок урегулирования проблемной задолженности
+								</li>
+								
+							</ul>
+						</div>
+						<a class="button" href="https://halykbank.kz/credit/uregulirovanie-problemnoj-zadolzhennosti">Подробнее</a>
+
+					</div>
+					<div id="moch" class="card">
+						<img src="https://sun9-east.userapi.com/sun9-21/s/v1/ig2/KEfJIh9ssBaZxyq4OzseNnWa_1GqhuM5usC7Srk8rAP8i9sk5wapBXSFgpzN_-qjJ4wxHaQVXLeHLmxQfvU-EHSm.jpg?size=627x379&quality=95&type=album" alt="market" style="width:100%">
+						<div class="card-inner">
+							<h4><b>Осторожно! Мошенники!</b></h4>
+							<ul>
+								<li>
+									Не сообщайте личные данные и пароли
+								</li>
+								<li>
+									Не устанавливаейте сторонние программы
+								</li>
+								
+							</ul>
+							
+						</div>
+						<a class="button" href="scammers.html">Подробнее</a>
+
+					</div>
+				</div>
+				<div>
+					<h2> Мои товары в Halyk Market</h2>
+				</div>
+				<div class="card-container">
+					<div id="helper" class="cardM">
+						<img src="https://sun9-west.userapi.com/sun9-63/s/v1/ig2/JTWZhXZmsRVxfeVLA0FJ1QCwHr_BLu82Hm8hsMH04NPdb452SFZbWQ15wyifzT0uwCjqy0zzC-QsGIoI1Iu5jzjt.jpg?size=1295x755&quality=95&type=album" alt="market" style="width:100%">
+						<div class="card-inner">
+							<p>
+								Универсальный помощник уборки
+							</p>
+						</div>
+					
+
+					</div>
+					<div id="sport" class="cardM">
+						<img src="https://sun9-west.userapi.com/sun9-65/s/v1/ig2/lX1KAmHjiC-hTZqCgzvmmw5wFuR9f9P7UhvEvmMirXwM8YQXexICao-jsSLvtboK8pOhwuGanwCbRJegVHxh678f.jpg?size=1290x767&quality=95&type=album" alt="market" style="width:100%">
+						<div class="card-inner">
+							<p>
+								Приобритайте спортивные товары на Halyk Market
+							</p>
+						</div>
+
+					</div>
+					<div id="iphone" class="cardM">
+						<img src="https://sun9-east.userapi.com/sun9-17/s/v1/ig2/ipbgcc86YIkgekZbtrRDOLOPu1JmQ1SA_h-WVxgXetG4y5tfq-t7BM2P4izZSTjews7yoOjrxiBDCGqwcPTqtAtZ.jpg?size=1290x774&quality=95&type=album" alt="market" style="width:100%">
+						<div class="card-inner">
+							<p>
+								Встаньте обладателем нового iPhone 17. Рассрочка 0-0-24
+							</p>
+						</div>
+
+					</div>
+					<div id="newyear" class="cardM">
+						<img src="https://sun9-west.userapi.com/sun9-12/s/v1/ig2/bjq_9-ParUS0BvgudGtkzVfcjxVPnPGVkgxHYxQ7AngkNN2EsjLru7mjdiojAKiQjMLqqErHv_BVzXLpvEzR8gtc.jpg?size=1287x763&quality=95&type=album" alt="market" style="width:100%">
+						<div class="card-inner">
+							<p>
+								Большой ассортимент новогодных товаров в рассрочку.
+							</p>
+						</div>
+
+					</div>
+
+				</div>
+				
+			</div>	
+
+			
+	</div>
+	<script>
+		let menuBtn = document.querySelector('.menu-btn');
+		let menu = document.querySelector('.menu');
+
+		menuBtn.addEventListener('click', function(){
+			menuBtn.classList.toggle('active');
+			menu.classList.toggle('active');
+		})
+		var slideIndex = 1;
+		showSlides(slideIndex);
+		
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			  slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			  dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+
+		window.onload = function () {
+			var a = document.querySelector('#credits');
+			var b = document.querySelector('#instalments');
+			var c = document.querySelector('#cards');
+			var d = document.querySelector('#deposite');
+			var f = document.querySelector('#transfers');
+			var g = document.querySelector('#others');
+			a.onmouseout = function(e) {
+				document.getElementById('creditsSlide').style.display='none'; 
+				document.getElementById('slide').style.display='block';
+				document.getElementById('scrollNumber').style.display='block';
+			}
+			a.onmouseover = function(e) {
+				document.getElementById('creditsSlide').style.display='block'; 
+				document.getElementById('slide').style.display='none'; 
+				document.getElementById('scrollNumber').style.display='none';
+			};
+			b.onmouseout = function(e) {
+				document.getElementById('instalmentsSlide').style.display='none'; 
+				document.getElementById('slide').style.display='block';
+				document.getElementById('scrollNumber').style.display='block';
+			}
+			b.onmouseover = function(e) {
+				document.getElementById('instalmentsSlide').style.display='block'; 
+				document.getElementById('slide').style.display='none'; 
+				document.getElementById('scrollNumber').style.display='none';
+			};
+			c.onmouseout = function(e) {
+				document.getElementById('cardsSlide').style.display='none'; 
+				document.getElementById('slide').style.display='block';
+				document.getElementById('scrollNumber').style.display='block';
+			}
+			c.onmouseover = function(e) {
+				document.getElementById('cardsSlide').style.display='block'; 
+				document.getElementById('slide').style.display='none'; 
+				document.getElementById('scrollNumber').style.display='none';
+			};
+			d.onmouseout = function(e) {
+				document.getElementById('depositeSlide').style.display='none'; 
+				document.getElementById('slide').style.display='block';
+				document.getElementById('scrollNumber').style.display='block';
+			}
+			d.onmouseover = function(e) {
+				document.getElementById('depositeSlide').style.display='block'; 
+				document.getElementById('slide').style.display='none'; 
+				document.getElementById('scrollNumber').style.display='none';
+			};
+			
+			f.onmouseout = function(e) {
+				document.getElementById('transfersSlide').style.display='none'; 
+				document.getElementById('slide').style.display='block';
+				document.getElementById('scrollNumber').style.display='block';
+			}
+			f.onmouseover = function(e) {
+				document.getElementById('transfersSlide').style.display='block'; 
+				document.getElementById('slide').style.display='none'; 
+				document.getElementById('scrollNumber').style.display='none';
+			};
+			g.onmouseout = function(e) {
+				document.getElementById('othersSlide').style.display='none'; 
+				document.getElementById('slide').style.display='block';
+				document.getElementById('scrollNumber').style.display='block';
+			}
+			g.onmouseover = function(e) {
+				document.getElementById('othersSlide').style.display='block'; 
+				document.getElementById('slide').style.display='none'; 
+				document.getElementById('scrollNumber').style.display='none';
+			};
+		}
+		</script>
+</body>
+</html>

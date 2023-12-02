@@ -1,0 +1,100 @@
+body {
+    height: 180vh;
+    border-radius: 100px;
+    background: linear-gradient(208deg, #0A7759 0.53%, rgba(107, 191, 68, 0.85) 52.19%, rgba(107, 191, 68, 0.00) 132.92%);
+}
+.row{
+    display: flex;
+}
+.img1{
+    width: 20%;
+    margin-bottom: -4%;
+}
+.head{
+    margin-left: 11%;
+    color:  #C4921F;
+    font-size: smaller;
+}
+button {
+    background-color: #E9B223; /* Set button background color */
+    color: #fff; /* Set button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px; /* Increase border-radius for a more rounded appearance */
+    cursor: pointer;
+    font-family: 'Inter', sans-serif; /* Set font-family to Inter */
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add smooth transitions for background color and transform */
+    margin-right: 10px; /* Add margin between buttons */
+  }
+  
+  button:hover {
+    background-color: #C4921F; /* Change button background color on hover */
+    transform: scale(1.05); /* Add a slight scaling effect on hover */
+  }
+  
+  /* Add this to your menu.css */
+  
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu {
+    position: relative;
+  }
+  
+  .menu-btn {
+    background-color: #E9B223; /* Set menu background color to #E9B223 */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px; /* Set border-radius for the menu button */
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .menu-btn:hover {
+    background-color: #C4921F;
+    transform: scale(1.05);
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #E9B223; /* Set dropdown background color to #E9B223 */
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu:hover .dropdown {
+    display: block;
+  }
+  
+  .dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dropdown li {
+    padding: 10px;
+  }
+  
+  .dropdown a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+  }
+  
+  .dropdown a:hover {
+    background-color: #C4921F;
+  }
+  .row1{
+    display: flex;
+  }
+

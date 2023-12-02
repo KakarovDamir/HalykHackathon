@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    
+    <div style="margin-left: 8%;">
+        <div>
+            <img class="img1" src="Halyk_logo2.png" alt="#">
+        </div>
+        <div class="head">
+            <h1>Analytics</h1>
+        </div>
+    </div>
+    <div style="margin-left: 8%; margin-top: -7%;">
+        <form onsubmit="return submitDates1()">
+            <input type="date" id="startDate1" name="startDate1" required>
+            <input type="date" id="endDate1" name="endDate1" required>
+            <button type="submit">Показать график</button>
+            <canvas id="myChart1"></canvas>
+        </form>
+    </div>
+    <script>
+        function submitDates1() {
+            var startDate = document.getElementById("startDate1").value;
+            var endDate = document.getElementById("endDate1").value;
+
+            var blob = new Blob([startDate, ",", endDate], { type: "text/plain" });
+            var link = document.createElement("a");
+
+            document.body.appendChild(link);
+            link.href = URL.createObjectURL(blob);
+            link.download = "graph1.csv";
+            link.click();
+            document.body.removeChild(link);
+
+            return false; // Prevent the form from submitting
+        }
+    </script>
+    
+    <iframe style="width: 100%;" src="plotly_figure1.html" width="600" height="400"></iframe>
+    <div style=" margin-left: 8%;">
+        <div class="row1">
+            <div class="menu">
+                <button class="menu-btn">Продукты 1 ▼</button>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">Iphone 14 Case</a></li>
+                        <li><a href="#">Iphone 15 Case</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-left: 70%;" class="menu">
+                <button  class="menu-btn">Вид графика 1 ▼</button>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">Продано</a></li>
+                        <li><a href="#">Остаток</a></li>
+                        <li><a href="#">Доход</a></li>
+                        <li><a href="#">Цена</a></li>
+                        <li><a href="#">Количество</a></li>
+                        <li><a href="#">Спрос</a></li> <!-- Fix the closing tag -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- second date input -->
+    <div style="margin-left: 8%; margin-top: -5%;">
+        <form onsubmit="return submitDates2()">
+            <input type="date" id="startDate2" name="startDate2" required>
+            <input type="date" id="endDate2" name="endDate2" required>
+            <button type="submit">Показать график</button>
+            <canvas id="myChart2"></canvas>
+        </form>
+    </div>
+    <script>
+        function submitDates2() {
+            var startDate = document.getElementById("startDate2").value;
+            var endDate = document.getElementById("endDate2").value;
+
+            var blob = new Blob([startDate, ",", endDate], { type: "text/plain" });
+            var link = document.createElement("a");
+
+            document.body.appendChild(link);
+            link.href = URL.createObjectURL(blob);
+            link.download = "graph2.csv";
+            link.click();
+            document.body.removeChild(link);
+
+            return false; // Prevent the form from submitting
+        }
+    </script>
+    <iframe style="width: 100%; margin-top: 5%;" src="plotly_figure2.html" width="600" height="400"></iframe>
+    <div style=" margin-left: 8%;">
+        <div class="row1">
+            <div class="menu">
+                <button class="menu-btn">Продукты 2 ▼</button>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">Iphone 14 Case</a></li>
+                        <li><a href="#">Iphone 15 Case</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-left: 70%;" class="menu">
+                <button  class="menu-btn">График 2 ▼</button>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">Продано</a></li>
+                        <li><a href="#">Остаток</a></li>
+                        <li><a href="#">Доход</a></li>
+                        <li><a href="#">Цена</a></li>
+                        <li><a href="#">Количество</a></li>
+                        <li><a href="#">Спрос</a></li> <!-- Fix the closing tag -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>

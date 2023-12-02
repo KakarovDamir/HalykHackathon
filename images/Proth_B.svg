@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>spend</title>
+    <defs>
+        <linearGradient x1="13.75%" y1="16.25%" x2="85%" y2="86.25%" id="linearGradient-1">
+            <stop stop-color="#FFC100" offset="0%"></stop>
+            <stop stop-color="#E1A100" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="map" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="spend" fill-rule="nonzero">
+            <path d="M28,56 C43.463973,56 56,43.463973 56,28 C56,12.536027 43.463973,0 28,0 C12.536027,0 0,12.536027 0,28 C0,43.463973 12.536027,56 28,56 Z" id="Oval" fill="url(#linearGradient-1)"></path>
+            <circle id="Oval" stroke="#FFFFFF" cx="28" cy="28" r="24.5"></circle>
+            <path d="M28.816,39 C33.36,39 37.52,37.176 37.52,32.184 C37.52,30.168 36.56,27.832 33.936,27.032 L33.936,26.968 C35.664,25.976 36.592,24.024 36.592,22.104 C36.592,18.168 33.392,16.12 28.816,16.12 L20.4,16.12 L20.4,39 L28.816,39 Z M28.88,24.984 L26,24.984 L26,20.92 L28.784,20.92 C30.288,20.92 30.896,21.816 30.896,22.872 C30.896,23.96 30.288,24.984 28.88,24.984 Z M29.36,34.2 L26,34.2 L26,29.464 L29.392,29.464 C31.024,29.464 31.792,30.52 31.792,31.8 C31.792,33.08 30.992,34.2 29.36,34.2 Z" id="B" fill="#008060"></path>
+        </g>
+    </g>
+</svg>

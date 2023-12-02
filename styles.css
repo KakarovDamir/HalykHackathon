@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    border-radius: 4px;
+    background: linear-gradient(208deg, #0A7759 0.53%, rgba(107, 191, 68, 0.85) 52.19%, rgba(107, 191, 68, 0.00) 132.92%);
+  }
+  
+  .container {
+    text-align: left; /* Align text to the left */
+    border-radius: 4px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  h1 {
+    color: #E9B223; /* Set text color to #E9B223 */
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Set font-family to Inter */
+  }
+  
+  .container img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+  }
+  
+  button {
+    background-color: #E9B223; /* Set button background color */
+    color: #fff; /* Set button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px; /* Increase border-radius for a more rounded appearance */
+    cursor: pointer;
+    font-family: 'Inter', sans-serif; /* Set font-family to Inter */
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add smooth transitions for background color and transform */
+    margin-right: 10px; /* Add margin between buttons */
+  }
+  
+  button:hover {
+    background-color: #C4921F; /* Change button background color on hover */
+    transform: scale(1.05); /* Add a slight scaling effect on hover */
+  }
+  
+  /* Add this to your menu.css */
+  
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu {
+    position: relative;
+  }
+  
+  .menu-btn {
+    background-color: #E9B223; /* Set menu background color to #E9B223 */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px; /* Set border-radius for the menu button */
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .menu-btn:hover {
+    background-color: #C4921F;
+    transform: scale(1.05);
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #E9B223; /* Set dropdown background color to #E9B223 */
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu:hover .dropdown {
+    display: block;
+  }
+  
+  .dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dropdown li {
+    padding: 10px;
+  }
+  
+  .dropdown a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+  }
+  
+  .dropdown a:hover {
+    background-color: #C4921F;
+  }
+  
+  
+  
+  /* CSS */
+  .button-33 {
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-33:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+  }
+  
+  .menu2 .menu_list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #E9B223; /* Set dropdown background color to #E9B223 */
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu2:hover .menu_list {
+    display: block;
+  }
+  
+  .menu2 .menu_list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu2 .menu_list li {
+    padding: 10px;
+  }
+  
+  .menu2 .menu_list a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+  }
+  
+  .menu2 .menu_list a:hover {
+    background-color: #C4921F;
+  }
